@@ -1,0 +1,419 @@
+/* =========================
+   Global Styling
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+/* =========================
+   Main App
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+body > div {
+  width: 100%;
+}
+
+body > div > div {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   Task Form
+========================= */
+
+.task-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+#inp {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#inp input {
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+#inp input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.2);
+}
+
+#inp button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#inp button:hover {
+  background: #3730a3;
+}
+
+/* =========================
+   Select Buttons
+========================= */
+
+#btns {
+  display: flex;
+  gap: 12px;
+}
+
+#btns select {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   Task Status
+========================= */
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 20px 0 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.status-section label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.status-section select {
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.status-section select:hover {
+  background: #f5f3ff;
+}
+
+/* =========================
+   Sort Tasks
+========================= */
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.filter-section label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-section select {
+  min-width: 220px;
+  padding: 10px 14px;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-section select:hover {
+  background: #f5f3ff;
+}
+
+/* =========================
+   Task List
+========================= */
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-list li {
+  background: white;
+  margin-bottom: 12px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Text */
+
+.task-list li span {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.task-list small {
+  margin-left: 10px;
+  color: #777;
+}
+
+/* =========================
+   Task Buttons
+========================= */
+
+.task-list li div:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.task-list button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Complete Button */
+
+.task-list button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.task-list button:first-child:hover {
+  background: #16a34a;
+}
+
+/* Edit Button */
+
+.task-list .edit-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.task-list .edit-btn:hover {
+  background: #d97706;
+}
+
+/* Delete Button */
+
+.task-list button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.task-list button:last-child:hover {
+  background: #dc2626;
+}
+
+/* Completed Task */
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* =========================
+   Progress Tracker
+========================= */
+
+.progress-tracker {
+  background: white;
+  margin: 25px 0;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.progress-tracker h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.progress-tracker h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #4f46e5;
+}
+
+.progress-tracker p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* Progress Bar */
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #22c55e;
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   Clear All Button
+========================= */
+
+.clear-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #b91c1c;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+  body > div > div {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  #inp {
+    flex-direction: column;
+  }
+
+  #inp button {
+    width: 100%;
+  }
+
+  #btns {
+    flex-direction: column;
+  }
+
+  .task-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .task-list li div:last-child {
+    width: 100%;
+  }
+
+  .task-list button {
+    flex: 1;
+  }
+
+  /* Mobile Status */
+
+  .status-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .status-section select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Mobile Sort */
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-section select {
+    width: 100%;
+    min-width: 0;
+  }
+}
